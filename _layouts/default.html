@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+  <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+  <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+</head>
+<body>
+  <!-- Top Bar -->
+  {% include user_info_bar.html %}
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="cell-md-2">
+        <ul class="sidebar2">
+          <li><a href="#" data-panel="data_viewer">Data Viewer</a></li>
+          <li><a href="#" data-panel="job_cards">Job Cards</a></li>
+          <li><a href="#" data-panel="admin">Admin Panel</a></li>
+          <li><a href="#" data-panel="config">Config Panel</a></li>
+        </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="cell-md-10" id="main-content">
+        {% include data_viewer_panel.html %}
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
