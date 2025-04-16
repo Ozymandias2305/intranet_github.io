@@ -1,0 +1,65 @@
+# Site settings
+title: Intranet Portal
+description: Internal portal powered by Jekyll and Metro UI
+baseurl: "" # Leave this empty unless your site is in a subdirectory
+url: ""     # Set this if you're using a full URL (e.g. http://intranet.local)
+
+# Build settings
+markdown: kramdown
+theme: minima # You can remove this if not using the default theme
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Author info
+author:
+  name: Intranet Admin
+  email: admin@yourcompany.com
+
+# Collections
+collections:
+  staff:
+    output: true
+  docs:
+    output: true
+
+# Navigation links (optional)
+nav:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Documentation
+    url: /docs/
+  - title: Staff Directory
+    url: /staff/
+
+# Permalinks
+permalink: pretty
+
+# Defaults for posts and pages
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Exclude these files from the build
+exclude:
+  - README.md
+  - node_modules
+  - vendor
+  - metro-ui-master
+  - Gemfile
+  - Gemfile.lock
+
+# Include files
+include
