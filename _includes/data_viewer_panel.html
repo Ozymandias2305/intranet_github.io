@@ -1,0 +1,38 @@
+<div id="data_viewer_panel">
+  <h2>Data Viewer</h2>
+  <div class="grid">
+    <div class="row">
+      <div class="cell-md-4">
+        <select id="endpoint-selector" class="dropdown">
+          <option value="endpoint1">Endpoint 1</option>
+          <option value="endpoint2">Endpoint 2</option>
+        </select>
+      </div>
+      <div class="cell-md-4">
+        <input type="text" id="search-input" placeholder="Search..." data-role="input">
+      </div>
+    </div>
+  </div>
+  <table class="table striped" id="data-table">
+    <thead>
+      <tr>
+        <th>Select</th>
+        <th>Column 1</th>
+        <th>Column 2</th>
+        <!-- Add more columns as needed -->
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Data rows will be populated here -->
+    </tbody>
+  </table>
+  <div class="pagination" id="pagination-controls">
+    <button class="button" id="prev-page">Previous</button>
+    <span id="pagination-label">Page 1</span>
+    <button class="button" id="next-page">Next</button>
+  </div>
+  <div>
+    <button class="button success" id="print-selected">Print Selected</button>
+    <button class="button info" id="print-processing">Print Processing</button>
+  </div>
+</div>
